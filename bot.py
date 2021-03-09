@@ -6,6 +6,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# To change the chrome driver version because chrome updated, go to programfiles 86/chromedriver/chromedriver.exe and replace it with new file
+
 options = webdriver.ChromeOptions()
 # Using profile data allows the user to bypass the two step verification
 options.add_argument("user-data-dir=" + config.location)
@@ -45,7 +47,6 @@ for i in range(10):
             EC.presence_of_element_located((By.XPATH, spinner_wrapper)))
     except:
         print("No spinner")
-
 
     today = datetime.date.today()
     dayOffset = 2
